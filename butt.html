@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Toggle</title>
+  <style>
+    .default-style {
+      padding: 10px 20px;
+      background-color: lightgray;
+      color: black;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .active-style {
+      background-color: green;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="default-style" id="toggleBtn">Click Me</button>
+
+  <script>
+    const btn = document.getElementById('toggleBtn');
+
+    btn.addEventListener('click', () => {
+      if (btn.classList.contains('active-style')) {
+        btn.classList.remove('active-style');
+        btn.textContent = 'Click Me';
+      } else {
+        btn.classList.add('active-style');
+        btn.textContent = 'Clicked!';
+      }
+    });
+  </script>
+
+</body>
+</html>
